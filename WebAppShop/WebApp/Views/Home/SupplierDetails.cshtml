@@ -1,0 +1,26 @@
+
+@{
+    ViewData["Title"] = ViewBag.Supplier.Email;
+}
+<div class="row">
+    <div class="col-3">
+        <ul>
+            @foreach(Supplier item in ViewBag.Suppliers){
+                <li>
+                    <a href="/home/supplier/@item.SupplierId">@item.Email</a>
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="col-9">
+        <div class="card">
+           <div class="card-header">
+                <h1 class="card-title">@ViewBag.Supplier.Email</h1>
+           </div>
+        </div>
+        <div class="card=body">
+        </div>
+        <div>@ViewBag.Supplier.Description</div>
+    </div>
+</div>
